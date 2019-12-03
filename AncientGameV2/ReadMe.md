@@ -135,7 +135,7 @@ return
 
 Write a compiler(not available for now) for this architecture. After the above code is compiled, it is the challenge that the players get.
 
-To solve this problem, there is no need to simplify all logical operations. Since there is no complicated loop, you can find the conditions that prevent the control flow from jumping to the output "Sorry" through simple control flow tracking and symbol analysis. Finally, a constraint satisfaction process can be performed.
+To solve this challenge, there is no need to simplify all logical operations. Since there is no complicated loop, you can find the conditions that prevent the control flow from jumping to the part which outputs "Sorry" through simple control flow tracking and symbol analysis. Finally, a constraint satisfaction process can be performed.
 
 During the competition, due to the negligence of the author, the implementation of the `outofnumbers (var)` function was incorrectly written as `return var in range (10)`, resulting in multiple solutions. Since the target Sudoku should only be filled with 1 ~ 9, the correct implementation should be `return var in range (1, 10)`. It has now been fixed.
 
