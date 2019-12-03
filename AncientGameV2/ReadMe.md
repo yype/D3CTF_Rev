@@ -143,7 +143,9 @@ During the competition, due to the negligence of the author, the implementation 
 
 ![](https://i.imgur.com/PrzmyEu.png)
 
-> Flag: d3ctf{g5lk9t28zz47y3l6m2kosbajd2vk9e2dwghxgfktcki}
->
-> Referenceable solution script: updating...
+**Solution**
+
+Flag: d3ctf{g5lk9t28zz47y3l6m2kosbajd2vk9e2dwghxgfktcki}
+
+> Referenceable solution script: [sol.py](https://github.com/0h2o/D3CTF_Rev/blob/master/AncientGameV2/sol.py) by [Byaidu](https://github.com/byaidu)
 
