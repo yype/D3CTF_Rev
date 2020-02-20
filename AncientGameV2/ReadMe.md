@@ -133,7 +133,7 @@ print(wrong)
 return
 ```
 
-Write a compiler(not available for now) for this architecture. After the above code is compiled, it is the challenge that the players get.
+Write an assembler for this architecture to generate the challenge that the players should get.
 
 To solve this challenge, there is no need to simplify all logical operations. Since there is no complicated loop, you can find the conditions that prevent the control flow from jumping to the part which outputs "Sorry" through simple control flow tracking and symbol analysis. Finally, a constraint satisfaction process can be performed.
 
