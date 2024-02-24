@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <memory.h>
-#include <miracl/miracl.h>
+#include <miracl.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -33,6 +33,9 @@ int currentLevel;
 int WIDTH, HEIGHT;
 int Status = 0;
 
+void display();
+void saveScoreboard();
+int isWin();
 
 int dsasetup(){
     FILE *fp;
@@ -162,7 +165,7 @@ void hashing(char* msg, int msg_len, big hash)
     bytes_to_big(20,h,hash);
 }
 
-int dsasign(char* msg, int msg_len, int print_flag, big prev_k){
+big dsasign(char* msg, int msg_len, int print_flag, big prev_k){
     FILE *fp;
     char ifname[50],ofname[50];
     big p,q,g,x,r,s,k,hash;
@@ -607,15 +610,15 @@ void run_game(char* username){
     system("clear");
     printf("Hi %s, welcome to the puuuushBox game ~\n", username);
     if(!strcmp(username, "flag")){
-        char r[30] = {0};
-        char s[30] = {0};
+        char r[50] = {0};
+        char s[50] = {0};
         FILE *fl = fopen("signed.out", "rt");
-        fscanf(fl, "%s", r);
-        if(r[strlen(r)-1]=='\n') r[strlen(r)-1] = 0;
-        if(s[strlen(s)-1]=='\n') s[strlen(s)-1] = 0;
-        fscanf(fl, "%s", s);
+        fgets(r, sizeof(r), fl);
+        fgets(s, sizeof(s), fl);
+        r[16] = 0;
+        s[16] = 0;
         fclose(fl);
-        printf("Congratz, your flag is D3CTF{%.16s%.16s}\n", r, s);
+        printf("Congratz, your flag is D3CTF{%s%s}\n", r, s);
     }
 
     while (1) {

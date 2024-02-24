@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <memory.h>
-#include <miracl/miracl.h>
+#include <miracl.h>
 #include <stdlib.h>
 #include <string.h>
 
